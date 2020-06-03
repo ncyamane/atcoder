@@ -1,20 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const uint64_t maxint = 1000000000000000000;
+const long long maxint = 1000000000000000000;
 
 int main() {
-  int n;
-  cin >> n;
-  uint64_t tmp;
-  uint64_t ans = 1;
-  for (int i = 0; i < n; ++i) {
+  int N;
+  cin >> N;
+
+  long long ans = 1;
+  for (int i = 1; i <= N; i++) {
+    long long tmp;
     cin >> tmp;
-    ans *= tmp;
+
+    if (tmp == 0) {
+      ans = 0;
+      break;
+    }
+    if (tmp > maxint / ans) {
+      ans = -1;
+    }
+    if (ans != -1) {
+      ans *= tmp;
+    }
   }
-  if (ans > maxint) {
-    cout << -1 << endl;
-  } else {
-    cout << ans << endl;
-  }
+
+  cout << ans << endl;
+
+  return 0;
 }
