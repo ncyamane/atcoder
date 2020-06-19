@@ -13,9 +13,9 @@ int main() {
     cin >> p.at(i);
   }
   sort(p.begin(), p.end());
-  vector<int> cand(102);
-  for (int i = 0; i <= cand.size(); i++) {
-    cand.at(i) == i;
+  vector<int> cand;
+  for (int i = 0; i < p.at(n) - p.at(0); i++) {
+    cand.at(i) =
   }
   int ans;
 }
