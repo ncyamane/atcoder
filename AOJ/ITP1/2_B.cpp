@@ -5,8 +5,8 @@ int main() {
   int a, b, c;
   cin >> a >> b >> c;
 
-  string s;
-  cin >> s;
-
-  cout << a + b + c << " " << s << endl;
+  if (a < b && b < c) {
+    cout << "Yes" << endl;
+  } else
+    cout << "No" << endl;
 }
